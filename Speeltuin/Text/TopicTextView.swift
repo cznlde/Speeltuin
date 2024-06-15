@@ -7,22 +7,20 @@
 
 import SwiftUI
 
-struct TopicTextView: BaseTopicView {
+struct TopicTextView: View {
     let topic = Topic(name: "Textbox", description: "Text, TextEditor, TextField, SecureField", image: "rectangle.and.pencil.and.ellipsis")
+
     var body: some View {
-        VStack {
-            Text(topic.description)
-                .font(.title)
-                .foregroundColor(.blue)
-            Text("First line")
-                .foregroundColor(.cyan)
-                .font(.title2)
-            Text("Second line")
-                .foregroundColor(.green)
-                .font(.title2)
+        BaseTopicView(topic: topic) {
+            VStack {
+                Text("First line")
+                    .foregroundColor(.cyan)
+                    .font(.largeTitle)
+                Text("Second line")
+                    .foregroundColor(.green)
+                    .font(.title2)
+            }
         }
-        .padding()
-        .navigationTitle(topic.name)
     }
 }
 
@@ -31,3 +29,4 @@ struct TopicTextView: BaseTopicView {
         TopicTextView()
     }
 }
+

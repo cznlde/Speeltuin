@@ -21,8 +21,4 @@ struct Topic: Identifiable , Hashable{
         hasher.combine(id)
     }
 }
-
-protocol BaseTopicView: View {
-    var topic: Topic { get }
-}
  
