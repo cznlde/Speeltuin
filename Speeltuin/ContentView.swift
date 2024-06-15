@@ -7,18 +7,37 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    var topicViews: [any BaseTopicView] = [
+        TopicTextView(),
+        TopicImageView(),
+        TopicListView()
+    ]
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List(0..<topicViews.count, id: \.self) { index in
+                let topicView = topicViews[index]
+                
+                NavigationLink(destination: AnyView(topicView)) {
+                    HStack {
+                        Image(systemName: topicView.topic.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(.blue)
+                        Text(topicView.topic.name)
+                    }
+                }
+            }
+            .navigationTitle("Topics")
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    NavigationStack {
+        ContentView()
+    }
 }

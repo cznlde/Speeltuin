@@ -14,6 +14,10 @@
 		4A6A7AB42C1D74E600B9288C /* SpeeltuinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AB32C1D74E600B9288C /* SpeeltuinTests.swift */; };
 		4A6A7ABE2C1D74E600B9288C /* SpeeltuinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ABD2C1D74E600B9288C /* SpeeltuinUITests.swift */; };
 		4A6A7AC02C1D74E600B9288C /* SpeeltuinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ABF2C1D74E600B9288C /* SpeeltuinUITestsLaunchTests.swift */; };
+		4A6A7AD12C1D772E00B9288C /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AD02C1D772E00B9288C /* Topic.swift */; };
+		4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AD92C1D782400B9288C /* TopicTextView.swift */; };
+		4A6A7ADC2C1D783300B9288C /* TopicImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ADB2C1D783300B9288C /* TopicImageView.swift */; };
+		4A6A7ADE2C1D784900B9288C /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ADD2C1D784900B9288C /* TopicListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		4A6A7AB92C1D74E600B9288C /* SpeeltuinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeeltuinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6A7ABD2C1D74E600B9288C /* SpeeltuinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeeltuinUITests.swift; sourceTree = "<group>"; };
 		4A6A7ABF2C1D74E600B9288C /* SpeeltuinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeeltuinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A6A7AD02C1D772E00B9288C /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		4A6A7AD92C1D782400B9288C /* TopicTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTextView.swift; sourceTree = "<group>"; };
+		4A6A7ADB2C1D783300B9288C /* TopicImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicImageView.swift; sourceTree = "<group>"; };
+		4A6A7ADD2C1D784900B9288C /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A246F732C1D92D9005953F2 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				4A6A7AD02C1D772E00B9288C /* Topic.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		4A246F742C1D92F9005953F2 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				4A6A7AD92C1D782400B9288C /* TopicTextView.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		4A246F752C1D9305005953F2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				4A6A7ADB2C1D783300B9288C /* TopicImageView.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		4A246F762C1D9311005953F2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				4A6A7ADD2C1D784900B9288C /* TopicListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		4A6A7A962C1D74E500B9288C = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +134,13 @@
 		4A6A7AA12C1D74E500B9288C /* Speeltuin */ = {
 			isa = PBXGroup;
 			children = (
-				4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */,
-				4A6A7AA42C1D74E500B9288C /* ContentView.swift */,
+				4A246F762C1D9311005953F2 /* List */,
+				4A246F752C1D9305005953F2 /* Image */,
+				4A246F742C1D92F9005953F2 /* Text */,
+				4A246F732C1D92D9005953F2 /* Content */,
 				4A6A7AA62C1D74E600B9288C /* Assets.xcassets */,
+				4A6A7AA42C1D74E500B9288C /* ContentView.swift */,
+				4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */,
 				4A6A7AA82C1D74E600B9288C /* Preview Content */,
 			);
 			path = Speeltuin;
@@ -258,6 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */,
+				4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */,
+				4A6A7ADE2C1D784900B9288C /* TopicListView.swift in Sources */,
+				4A6A7AD12C1D772E00B9288C /* Topic.swift in Sources */,
+				4A6A7ADC2C1D783300B9288C /* TopicImageView.swift in Sources */,
 				4A6A7AA32C1D74E500B9288C /* SpeeltuinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
