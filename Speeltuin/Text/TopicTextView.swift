@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopicTextView: View {
+struct TopicTextView: View,TopicProvidable {
     let topic = Topic(name: "Textbox", description: "Text, TextEditor, TextField, SecureField", image: "rectangle.and.pencil.and.ellipsis")
 
     var body: some View {

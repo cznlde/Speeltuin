@@ -31,8 +31,8 @@ struct BaseTopicView<Content: View>: View {
                     .padding([.leading, .trailing, .bottom])
                 Spacer()
             }
-            .padding()
-            
+            .padding([.leading, .trailing])
+            Divider()
             // Specific content
             content
             Spacer()

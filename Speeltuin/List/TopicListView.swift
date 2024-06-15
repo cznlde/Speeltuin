@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct TopicListView: View {
+struct TopicListView: View ,TopicProvidable{
     let topic = Topic(name: "List", description: "This is a list", image: "list.dash.header.rectangle")
 
     var body: some View {

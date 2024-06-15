@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct TopicImageView: View {
+struct TopicImageView: View, TopicProvidable {
     let topic = Topic(name: "Images", description: "Image, Async Image, Tap, Zoom", image: "photo")
     @State private var zoom = false
     var body: some View {

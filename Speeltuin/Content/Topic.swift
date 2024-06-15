@@ -22,3 +22,7 @@ struct Topic: Identifiable , Hashable{
     }
 }
  
+
+protocol TopicProvidable {
+    var topic: Topic { get }
+}
