@@ -19,6 +19,7 @@ struct TopicTextView: View,TopicProvidable {
                 Text("Second line")
                     .foregroundColor(.green)
                     .font(.title2)
+                TopicStateViewListButton()
             }
         }
     }

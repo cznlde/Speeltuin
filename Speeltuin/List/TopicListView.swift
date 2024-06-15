@@ -12,11 +12,9 @@ struct TopicListView: View ,TopicProvidable{
     var body: some View {
         BaseTopicView(topic: topic) {
             VStack {
-                Text("List View")
-                    .font(.title)
-                    .foregroundColor(.blue)
-                // Voeg hier meer inhoud voor de lijstweergave toe
+                TopicStateViewListButton()
             }
+          
         }
     }
 }
