@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				4A84FFCE2C1DD30400B15121 /* NavigationButtons */,
-				4A84FFC92C1DB3C500B15121 /* State */,
+				4A84FFC92C1DB3C500B15121 /* State&Binding */,
 				4A246F762C1D9311005953F2 /* List */,
 				4A246F752C1D9305005953F2 /* Image */,
 				4A246F742C1D92F9005953F2 /* Text */,
@@ -185,13 +185,13 @@
 			path = SpeeltuinUITests;
 			sourceTree = "<group>";
 		};
-		4A84FFC92C1DB3C500B15121 /* State */ = {
+		4A84FFC92C1DB3C500B15121 /* State&Binding */ = {
 			isa = PBXGroup;
 			children = (
 				4A84FFCA2C1DB3EA00B15121 /* TopicStateView.swift */,
 				4A84FFCC2C1DD12A00B15121 /* TopicStateViewList.swift */,
 			);
-			path = State;
+			path = "State&Binding";
 			sourceTree = "<group>";
 		};
 		4A84FFCE2C1DD30400B15121 /* NavigationButtons */ = {
