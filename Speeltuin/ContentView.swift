@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct ContentView: View {
+   
+
     let topicViews: [(view: AnyView, topic: Topic)] = [
         (AnyView(TopicTextView()), TopicTextView().topic),
         (AnyView(TopicListView()), TopicListView().topic),
@@ -15,6 +17,7 @@ struct ContentView: View {
     ]
 
     var body: some View {
+         
         NavigationStack {
             List(0 ..< topicViews.count, id: \.self) { index in
                 let topicView = topicViews[index]
@@ -31,10 +34,32 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Topics")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EnvironmentViewNew()
+                        .padding()
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EnvironmentViewOld()
+                        .padding()
+                }
+            }
         }
     }
 }
 
+
+/// Comment:
+/// Ensure that the environment objects (`MyModelOld` and `MyModel`) are injected in the preview,
+/// even if they are only used in subviews. This prevents crashes in the preview because SwiftUI
+/// requires all environment dependencies to be correctly set up in the preview context.
+/// Without these injections, the preview will crash because the required environment objects
+/// are not available in the view hierarchy.
+///
 #Preview {
     ContentView()
+        // inject the model into the environment. This is only for the preview.
+        // in the app, the model is injected in the `SpeeltuinApp` struct.
+        .environmentObject(MyModelOld()) // pre iOS 17
+        .environment(MyModel()) // iOS 17 and newer
 }

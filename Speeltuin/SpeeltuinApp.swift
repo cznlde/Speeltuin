@@ -12,6 +12,9 @@ struct SpeeltuinApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(MyModelOld()) //pre iOS 17
+                .environment(MyModel()) // iOS 17 and newer
+            
         }
     }
 }
