@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4A3285412C1F32010015C165 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285402C1F32010015C165 /* Config.swift */; };
+		4A3285492C25F0F50015C165 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285482C25F0F50015C165 /* WeatherView.swift */; };
+		4A32854B2C25F1350015C165 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A32854A2C25F1350015C165 /* Weather.swift */; };
+		4A32854D2C25F2910015C165 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A32854C2C25F2910015C165 /* Location.swift */; };
+		4A3285512C25F7B00015C165 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285502C25F7B00015C165 /* ApiEndpoint.swift */; };
+		4A3285532C25FA4B0015C165 /* GeoCodingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285522C25FA4B0015C165 /* GeoCodingClient.swift */; };
+		4A3285552C25FF590015C165 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285542C25FF590015C165 /* WeatherClient.swift */; };
+		4A3285572C2607A50015C165 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285562C2607A50015C165 /* Constants.swift */; };
 		4A6A7AA32C1D74E500B9288C /* SpeeltuinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */; };
 		4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA42C1D74E500B9288C /* ContentView.swift */; };
 		4A6A7AA72C1D74E600B9288C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA62C1D74E600B9288C /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 
 /* Begin PBXFileReference section */
 		4A3285402C1F32010015C165 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4A3285482C25F0F50015C165 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		4A32854A2C25F1350015C165 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		4A32854C2C25F2910015C165 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4A3285502C25F7B00015C165 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		4A3285522C25FA4B0015C165 /* GeoCodingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCodingClient.swift; sourceTree = "<group>"; };
+		4A3285542C25FF590015C165 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
+		4A3285562C2607A50015C165 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A6A7A9F2C1D74E500B9288C /* Speeltuin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speeltuin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeeltuinApp.swift; sourceTree = "<group>"; };
 		4A6A7AA42C1D74E500B9288C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,8 +147,30 @@
 		4A32853F2C1F30250015C165 /* OpenWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				4A3285482C25F0F50015C165 /* WeatherView.swift */,
+				4A32854E2C25F7720015C165 /* Models */,
 			);
 			path = OpenWeatherApp;
+			sourceTree = "<group>";
+		};
+		4A32854E2C25F7720015C165 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A32854A2C25F1350015C165 /* Weather.swift */,
+				4A32854C2C25F2910015C165 /* Location.swift */,
+				4A32854F2C25F7840015C165 /* Clients */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4A32854F2C25F7840015C165 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				4A3285502C25F7B00015C165 /* ApiEndpoint.swift */,
+				4A3285522C25FA4B0015C165 /* GeoCodingClient.swift */,
+				4A3285542C25FF590015C165 /* WeatherClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 		4A6A7A962C1D74E500B9288C = {
@@ -173,6 +209,7 @@
 				4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */,
 				4A6A7AA82C1D74E600B9288C /* Preview Content */,
 				4A3285402C1F32010015C165 /* Config.swift */,
+				4A3285562C2607A50015C165 /* Constants.swift */,
 			);
 			path = Speeltuin;
 			sourceTree = "<group>";
@@ -353,18 +390,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3285512C25F7B00015C165 /* ApiEndpoint.swift in Sources */,
 				4A84FFD72C1F268D00B15121 /* EnvironmentViewOld.swift in Sources */,
+				4A32854D2C25F2910015C165 /* Location.swift in Sources */,
 				4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */,
 				4A84FFC62C1DAFA500B15121 /* BaseTopicView.swift in Sources */,
+				4A3285552C25FF590015C165 /* WeatherClient.swift in Sources */,
 				4A3285412C1F32010015C165 /* Config.swift in Sources */,
 				4A84FFD02C1DD33700B15121 /* TopicStateViewListButton.swift in Sources */,
 				4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */,
+				4A3285492C25F0F50015C165 /* WeatherView.swift in Sources */,
 				4A6A7ADE2C1D784900B9288C /* TopicListView.swift in Sources */,
+				4A3285572C2607A50015C165 /* Constants.swift in Sources */,
 				4A84FFD52C1F261200B15121 /* EnvironmentViewNew.swift in Sources */,
 				4A84FFCD2C1DD12A00B15121 /* TopicStateViewList.swift in Sources */,
 				4A6A7AD12C1D772E00B9288C /* Topic.swift in Sources */,
+				4A3285532C25FA4B0015C165 /* GeoCodingClient.swift in Sources */,
 				4A84FFD32C1F0B4500B15121 /* AppStateObject.swift in Sources */,
 				4A84FFCB2C1DB3EA00B15121 /* TopicStateView.swift in Sources */,
+				4A32854B2C25F1350015C165 /* Weather.swift in Sources */,
 				4A6A7ADC2C1D783300B9288C /* TopicImageView.swift in Sources */,
 				4A6A7AA32C1D74E500B9288C /* SpeeltuinApp.swift in Sources */,
 			);

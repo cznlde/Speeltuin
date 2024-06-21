@@ -14,6 +14,8 @@ struct ContentView: View {
         (AnyView(TopicListView()), TopicListView().topic),
         (AnyView(TopicImageView()), TopicImageView().topic),
         (AnyView(TopicStateView()), TopicStateView().topic),
+        (AnyView(WeatherView()), WeatherView().topic),
+        
     ]
 
     var body: some View {
