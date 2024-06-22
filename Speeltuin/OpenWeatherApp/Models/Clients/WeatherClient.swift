@@ -8,7 +8,7 @@
 import Foundation
 
 struct WeatherClient {
-    func fetchWeather(location: Location) async throws -> Weather {
+    func fetchWeather(location: Location) async throws -> WeatherResponse {
         do {
             let (data, response) = try await URLSession.shared.data(from: ApiEndpoint.endpointURL(for: .weaterByLocation(location.lat, location.lon)))
             
@@ -17,12 +17,11 @@ struct WeatherClient {
             }
             
             do {
-                let weatherResponse = try JSONDecoder().decode(WeatherResponse.self, from: data)
-                print(weatherResponse)
-                guard let firstWeather = weatherResponse.weather.first else {
+                
+                guard let weatherResponse = try? JSONDecoder().decode(WeatherResponse.self, from: data) else {
                     throw NetworkError.custom("No weather data available")
                 }
-                return firstWeather
+                return weatherResponse
             } catch {
                 throw NetworkError.decodingError(error)
             }

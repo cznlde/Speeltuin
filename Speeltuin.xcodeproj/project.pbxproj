@@ -15,6 +15,7 @@
 		4A3285532C25FA4B0015C165 /* GeoCodingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285522C25FA4B0015C165 /* GeoCodingClient.swift */; };
 		4A3285552C25FF590015C165 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285542C25FF590015C165 /* WeatherClient.swift */; };
 		4A3285572C2607A50015C165 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285562C2607A50015C165 /* Constants.swift */; };
+		4A6433252C26E918008463AC /* MeasurementFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6433242C26E918008463AC /* MeasurementFormatter+Extensions.swift */; };
 		4A6A7AA32C1D74E500B9288C /* SpeeltuinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */; };
 		4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA42C1D74E500B9288C /* ContentView.swift */; };
 		4A6A7AA72C1D74E600B9288C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA62C1D74E600B9288C /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		4A3285522C25FA4B0015C165 /* GeoCodingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCodingClient.swift; sourceTree = "<group>"; };
 		4A3285542C25FF590015C165 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		4A3285562C2607A50015C165 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4A6433242C26E918008463AC /* MeasurementFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		4A6A7A9F2C1D74E500B9288C /* Speeltuin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speeltuin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeeltuinApp.swift; sourceTree = "<group>"; };
 		4A6A7AA42C1D74E500B9288C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
+		4A6433232C26E8F5008463AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A6433242C26E918008463AC /* MeasurementFormatter+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4A6A7A962C1D74E500B9288C = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 		4A6A7AA12C1D74E500B9288C /* Speeltuin */ = {
 			isa = PBXGroup;
 			children = (
+				4A6433232C26E8F5008463AC /* Extensions */,
 				4A32853F2C1F30250015C165 /* OpenWeatherApp */,
 				4A84FFCE2C1DD30400B15121 /* NavigationButtons */,
 				4A84FFC92C1DB3C500B15121 /* State&Binding */,
@@ -393,6 +404,7 @@
 				4A3285512C25F7B00015C165 /* ApiEndpoint.swift in Sources */,
 				4A84FFD72C1F268D00B15121 /* EnvironmentViewOld.swift in Sources */,
 				4A32854D2C25F2910015C165 /* Location.swift in Sources */,
+				4A6433252C26E918008463AC /* MeasurementFormatter+Extensions.swift in Sources */,
 				4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */,
 				4A84FFC62C1DAFA500B15121 /* BaseTopicView.swift in Sources */,
 				4A3285552C25FF590015C165 /* WeatherClient.swift in Sources */,
