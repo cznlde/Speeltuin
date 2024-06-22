@@ -17,7 +17,7 @@ struct TopicImageView: View, TopicProvidable {
                     .resizable()
                     .frame(width: 100, height: 100)
                     .foregroundColor(.yellow)
-                Image("example")
+                Image(.example) //In Xcode 15 and later, images in your asset catalog are backed by Swift symbols which improve type safety and enable code completion. This means you can reference images using these generated symbols instead of using string names.
                     .resizable()
                     .frame(width: 100, height: 100)
                 Image("example")

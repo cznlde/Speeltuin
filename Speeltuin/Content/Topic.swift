@@ -14,8 +14,9 @@ struct Topic: Identifiable , Hashable{
     var id = UUID()
     var name: String
     var description: String
+   
     var image: String
- 
+    var isSystemImage: Bool = true
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)

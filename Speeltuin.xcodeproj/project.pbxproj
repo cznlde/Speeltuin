@@ -27,6 +27,7 @@
 		4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AD92C1D782400B9288C /* TopicTextView.swift */; };
 		4A6A7ADC2C1D783300B9288C /* TopicImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ADB2C1D783300B9288C /* TopicImageView.swift */; };
 		4A6A7ADE2C1D784900B9288C /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ADD2C1D784900B9288C /* TopicListView.swift */; };
+		4A73057E2C2758F100B5CA44 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */; };
 		4A84FFC62C1DAFA500B15121 /* BaseTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84FFC52C1DAFA500B15121 /* BaseTopicView.swift */; };
 		4A84FFC82C1DB0B700B15121 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A84FFC72C1DB0B700B15121 /* README.md */; };
 		4A84FFCB2C1DB3EA00B15121 /* TopicStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84FFCA2C1DB3EA00B15121 /* TopicStateView.swift */; };
@@ -78,6 +79,7 @@
 		4A6A7AD92C1D782400B9288C /* TopicTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTextView.swift; sourceTree = "<group>"; };
 		4A6A7ADB2C1D783300B9288C /* TopicImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicImageView.swift; sourceTree = "<group>"; };
 		4A6A7ADD2C1D784900B9288C /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
+		4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
 		4A84FFC52C1DAFA500B15121 /* BaseTopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTopicView.swift; sourceTree = "<group>"; };
 		4A84FFC72C1DB0B700B15121 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A84FFCA2C1DB3EA00B15121 /* TopicStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicStateView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3285482C25F0F50015C165 /* WeatherView.swift */,
+				4A32854F2C25F7840015C165 /* Clients */,
 				4A32854E2C25F7720015C165 /* Models */,
 			);
 			path = OpenWeatherApp;
@@ -160,7 +163,6 @@
 			children = (
 				4A32854A2C25F1350015C165 /* Weather.swift */,
 				4A32854C2C25F2910015C165 /* Location.swift */,
-				4A32854F2C25F7840015C165 /* Clients */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +209,7 @@
 		4A6A7AA12C1D74E500B9288C /* Speeltuin */ = {
 			isa = PBXGroup;
 			children = (
+				4A73057C2C2758D400B5CA44 /* ChatGPT */,
 				4A6433232C26E8F5008463AC /* Extensions */,
 				4A32853F2C1F30250015C165 /* OpenWeatherApp */,
 				4A84FFCE2C1DD30400B15121 /* NavigationButtons */,
@@ -248,6 +251,14 @@
 				4A6A7ABF2C1D74E600B9288C /* SpeeltuinUITestsLaunchTests.swift */,
 			);
 			path = SpeeltuinUITests;
+			sourceTree = "<group>";
+		};
+		4A73057C2C2758D400B5CA44 /* ChatGPT */ = {
+			isa = PBXGroup;
+			children = (
+				4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */,
+			);
+			path = ChatGPT;
 			sourceTree = "<group>";
 		};
 		4A84FFC92C1DB3C500B15121 /* State&Binding */ = {
@@ -412,6 +423,7 @@
 				4A84FFD02C1DD33700B15121 /* TopicStateViewListButton.swift in Sources */,
 				4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */,
 				4A3285492C25F0F50015C165 /* WeatherView.swift in Sources */,
+				4A73057E2C2758F100B5CA44 /* ChatGPTView.swift in Sources */,
 				4A6A7ADE2C1D784900B9288C /* TopicListView.swift in Sources */,
 				4A3285572C2607A50015C165 /* Constants.swift in Sources */,
 				4A84FFD52C1F261200B15121 /* EnvironmentViewNew.swift in Sources */,
@@ -586,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Speeltuin/Preview Content\"";
-				DEVELOPMENT_TEAM = V377KJ6RDJ;
+				DEVELOPMENT_TEAM = 4SERX37U6Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -615,7 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Speeltuin/Preview Content\"";
-				DEVELOPMENT_TEAM = V377KJ6RDJ;
+				DEVELOPMENT_TEAM = 4SERX37U6Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
