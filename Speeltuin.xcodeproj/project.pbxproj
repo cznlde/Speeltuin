@@ -16,6 +16,8 @@
 		4A3285552C25FF590015C165 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285542C25FF590015C165 /* WeatherClient.swift */; };
 		4A3285572C2607A50015C165 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3285562C2607A50015C165 /* Constants.swift */; };
 		4A6433252C26E918008463AC /* MeasurementFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6433242C26E918008463AC /* MeasurementFormatter+Extensions.swift */; };
+		4A6433272C27F154008463AC /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6433262C27F154008463AC /* MessageView.swift */; };
+		4A64332B2C27F26A008463AC /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64332A2C27F26A008463AC /* Chat.swift */; };
 		4A6A7AA32C1D74E500B9288C /* SpeeltuinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */; };
 		4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA42C1D74E500B9288C /* ContentView.swift */; };
 		4A6A7AA72C1D74E600B9288C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA62C1D74E600B9288C /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		4A3285542C25FF590015C165 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		4A3285562C2607A50015C165 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A6433242C26E918008463AC /* MeasurementFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		4A6433262C27F154008463AC /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		4A64332A2C27F26A008463AC /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		4A6A7A9F2C1D74E500B9288C /* Speeltuin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speeltuin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeeltuinApp.swift; sourceTree = "<group>"; };
 		4A6A7AA42C1D74E500B9288C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -185,6 +189,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4A6433282C27F24C008463AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A64332A2C27F26A008463AC /* Chat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A6433292C27F254008463AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A6433262C27F154008463AC /* MessageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4A6A7A962C1D74E500B9288C = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +276,8 @@
 		4A73057C2C2758D400B5CA44 /* ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				4A6433292C27F254008463AC /* View */,
+				4A6433282C27F24C008463AC /* Model */,
 				4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */,
 			);
 			path = ChatGPT;
@@ -415,6 +437,7 @@
 				4A3285512C25F7B00015C165 /* ApiEndpoint.swift in Sources */,
 				4A84FFD72C1F268D00B15121 /* EnvironmentViewOld.swift in Sources */,
 				4A32854D2C25F2910015C165 /* Location.swift in Sources */,
+				4A64332B2C27F26A008463AC /* Chat.swift in Sources */,
 				4A6433252C26E918008463AC /* MeasurementFormatter+Extensions.swift in Sources */,
 				4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */,
 				4A84FFC62C1DAFA500B15121 /* BaseTopicView.swift in Sources */,
@@ -424,6 +447,7 @@
 				4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */,
 				4A3285492C25F0F50015C165 /* WeatherView.swift in Sources */,
 				4A73057E2C2758F100B5CA44 /* ChatGPTView.swift in Sources */,
+				4A6433272C27F154008463AC /* MessageView.swift in Sources */,
 				4A6A7ADE2C1D784900B9288C /* TopicListView.swift in Sources */,
 				4A3285572C2607A50015C165 /* Constants.swift in Sources */,
 				4A84FFD52C1F261200B15121 /* EnvironmentViewNew.swift in Sources */,
@@ -598,7 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Speeltuin/Preview Content\"";
-				DEVELOPMENT_TEAM = 4SERX37U6Y;
+				DEVELOPMENT_TEAM = V377KJ6RDJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -627,7 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Speeltuin/Preview Content\"";
-				DEVELOPMENT_TEAM = 4SERX37U6Y;
+				DEVELOPMENT_TEAM = V377KJ6RDJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
