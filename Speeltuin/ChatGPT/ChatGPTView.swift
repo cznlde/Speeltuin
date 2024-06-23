@@ -59,6 +59,7 @@ struct ChatGPTView: View {
         chatViewModel.chats.append(chat)
         message = ""
         let _ = await chatViewModel.sendMessage(message: chat.content)
+        //TODO: ....
     }
 }
 
