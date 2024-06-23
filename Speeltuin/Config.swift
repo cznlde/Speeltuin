@@ -1,3 +1,4 @@
+ 
 //
 //  Config.swift
 //  Speeltuin
@@ -5,7 +6,7 @@
 //  Created by Ivana Kolin on 16.06.24.
 //
 
-
+ 
 import Foundation
 
 // om wijzigingen niet meer in github pushen
@@ -23,4 +24,5 @@ struct Config {
     static let OpenWeaterAppApiKey = "YOUR_API_KEY_HERE"
     //https://platform.openai.com/signup
     static let OpenAIAppApiKey = "YOUR_API_KEY_HERE"
+  
 }
