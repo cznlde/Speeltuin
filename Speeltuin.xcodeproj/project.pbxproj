@@ -18,6 +18,9 @@
 		4A6433252C26E918008463AC /* MeasurementFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6433242C26E918008463AC /* MeasurementFormatter+Extensions.swift */; };
 		4A6433272C27F154008463AC /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6433262C27F154008463AC /* MessageView.swift */; };
 		4A64332B2C27F26A008463AC /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64332A2C27F26A008463AC /* Chat.swift */; };
+		4A64332D2C2817E9008463AC /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64332C2C2817E9008463AC /* OpenAI.swift */; };
+		4A64332F2C281BC9008463AC /* OpenAIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A64332E2C281BC9008463AC /* OpenAIConstants.swift */; };
+		4A6433342C2849C1008463AC /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6433332C2849C1008463AC /* ChatViewModel.swift */; };
 		4A6A7AA32C1D74E500B9288C /* SpeeltuinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */; };
 		4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA42C1D74E500B9288C /* ContentView.swift */; };
 		4A6A7AA72C1D74E600B9288C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6A7AA62C1D74E600B9288C /* Assets.xcassets */; };
@@ -69,6 +72,9 @@
 		4A6433242C26E918008463AC /* MeasurementFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		4A6433262C27F154008463AC /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		4A64332A2C27F26A008463AC /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		4A64332C2C2817E9008463AC /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
+		4A64332E2C281BC9008463AC /* OpenAIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIConstants.swift; sourceTree = "<group>"; };
+		4A6433332C2849C1008463AC /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		4A6A7A9F2C1D74E500B9288C /* Speeltuin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speeltuin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6A7AA22C1D74E500B9288C /* SpeeltuinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeeltuinApp.swift; sourceTree = "<group>"; };
 		4A6A7AA42C1D74E500B9288C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				4A64332A2C27F26A008463AC /* Chat.swift */,
+				4A64332C2C2817E9008463AC /* OpenAI.swift */,
+				4A64332E2C281BC9008463AC /* OpenAIConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +211,14 @@
 				4A6433262C27F154008463AC /* MessageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4A6433322C2849A5008463AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A6433332C2849C1008463AC /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4A6A7A962C1D74E500B9288C = {
@@ -276,6 +292,7 @@
 		4A73057C2C2758D400B5CA44 /* ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				4A6433322C2849A5008463AC /* ViewModel */,
 				4A6433292C27F254008463AC /* View */,
 				4A6433282C27F24C008463AC /* Model */,
 				4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */,
@@ -439,9 +456,11 @@
 				4A32854D2C25F2910015C165 /* Location.swift in Sources */,
 				4A64332B2C27F26A008463AC /* Chat.swift in Sources */,
 				4A6433252C26E918008463AC /* MeasurementFormatter+Extensions.swift in Sources */,
+				4A64332D2C2817E9008463AC /* OpenAI.swift in Sources */,
 				4A6A7AA52C1D74E500B9288C /* ContentView.swift in Sources */,
 				4A84FFC62C1DAFA500B15121 /* BaseTopicView.swift in Sources */,
 				4A3285552C25FF590015C165 /* WeatherClient.swift in Sources */,
+				4A6433342C2849C1008463AC /* ChatViewModel.swift in Sources */,
 				4A3285412C1F32010015C165 /* Config.swift in Sources */,
 				4A84FFD02C1DD33700B15121 /* TopicStateViewListButton.swift in Sources */,
 				4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */,
@@ -459,6 +478,7 @@
 				4A32854B2C25F1350015C165 /* Weather.swift in Sources */,
 				4A6A7ADC2C1D783300B9288C /* TopicImageView.swift in Sources */,
 				4A6A7AA32C1D74E500B9288C /* SpeeltuinApp.swift in Sources */,
+				4A64332F2C281BC9008463AC /* OpenAIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
