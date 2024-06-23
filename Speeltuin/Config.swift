@@ -21,5 +21,6 @@ struct Config {
     // For more information on how to get your API key, visit:
     // https://home.openweathermap.org/users/sign_up
     static let OpenWeaterAppApiKey = "YOUR_API_KEY_HERE"
+    //https://platform.openai.com/signup
     static let OpenAIAppApiKey = "YOUR_API_KEY_HERE"
 }
