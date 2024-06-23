@@ -31,14 +31,14 @@ struct ChatGPTView: View {
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(25)
                         .onSubmit {
-                            Task{
-                               await sendMessage()
+                            Task {
+                                await sendMessage()
                             }
                         }
 
                     Button {
-                        Task{
-                           await sendMessage()
+                        Task {
+                            await sendMessage()
                         }
                     } label: {
                         Image(systemName: "arrow.up.circle.fill")
@@ -59,7 +59,7 @@ struct ChatGPTView: View {
         chatViewModel.chats.append(chat)
         message = ""
         let _ = await chatViewModel.sendMessage(message: chat.content)
-        //TODO: ....
+        // TODO: ....
     }
 }
 
