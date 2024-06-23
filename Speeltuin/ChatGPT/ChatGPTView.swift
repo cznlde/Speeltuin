@@ -15,14 +15,28 @@ struct ChatGPTView: View {
     var body: some View {
         BaseTopicView(topic: topic) {
             VStack {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(chatViewModel.chats, id: \.id) { chat in
-                            MessageView(chat: chat)
-                        }
-                    }
-                }
-
+                ScrollViewReader { scrollViewProxy in
+                              ScrollView {
+                                  LazyVStack {
+                                      ForEach(chatViewModel.chats, id: \.id) { chat in
+                                          MessageView(chat: chat)
+                                              .id(chat.id) // Assign an id to each chat view
+                                      }
+                                      if chatViewModel.isLoading {
+                                          ProgressView()
+                                      }
+                                  }
+                              }
+                              .onChange(of: chatViewModel.chats.count) {
+                                  // Scroll to the last chat when a new chat is added
+                                  if let lastChat = chatViewModel.chats.last {
+                                      withAnimation {
+                                          scrollViewProxy.scrollTo(lastChat.id, anchor: .bottom)
+                                      }
+                                  }
+                              }
+                          }
+                          
                 Divider().padding(.bottom, 10)
 
                 HStack {
@@ -53,6 +67,8 @@ struct ChatGPTView: View {
         }
     }
 
+        // MARK: - Helpers
+       
     func sendMessage() async {
         guard !message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         let chat = Chat(id: UUID().uuidString, content: message, createAt: Date(), sender: .me)
@@ -61,6 +77,13 @@ struct ChatGPTView: View {
         let _ = await chatViewModel.sendMessage(message: chat.content)
         // TODO: ....
     }
+        
+        var  progressView: some View {
+            ProgressView()
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+        }
 }
 
 #Preview {
