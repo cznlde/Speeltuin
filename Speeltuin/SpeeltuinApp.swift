@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SpeeltuinApp: App {
@@ -16,5 +17,6 @@ struct SpeeltuinApp: App {
                 .environment(MyModel()) // iOS 17 and newer
             
         }
+        .modelContainer(for: SwiftDataModel.self)
     }
 }

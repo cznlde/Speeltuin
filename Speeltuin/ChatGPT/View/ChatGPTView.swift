@@ -10,7 +10,10 @@ import SwiftUI
 struct ChatGPTView: View {
     let topic = Topic(name: "SwiftUI ChatGPT", description: "Using ChatGPT API and MV Pattern. Consuming JSON", image: "message", isSystemImage: true)
     @State private var message = ""
+    @State private var showSwiftDataView = false
+    
     @StateObject private var chatViewModel = ChatViewModel()
+    @Environment(\.modelContext) var modelContext
     
     var body: some View {
         BaseTopicView(topic: topic) {
@@ -67,44 +70,65 @@ struct ChatGPTView: View {
                 }
             }
             .padding()
-            .toolbar(content: {
-                if !chatViewModel.chats.isEmpty {  ToolbarItem( placement: .topBarLeading) {
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
                     Button {
-                        chatViewModel.chats.removeAll()
+                        showSwiftDataView = true
                     } label: {
-                        Image(systemName: "trash")
+                     
+                        Image(systemName: "clock")
                             .font(.caption)
-                        Text("Clear")
-                    }}
+                    }
+                    
+                    if !chatViewModel.chats.isEmpty {
+                        Button {
+                            chatViewModel.chats.removeAll()
+                        } label: {
+                            Image(systemName: "trash")
+                                .font(.caption)
+                            
+                        }
+                    }
                 }
             }
-            )
+            
+            .fullScreenCover(isPresented: $showSwiftDataView) {
+                NavigationView {
+                    SwiftDataVIew()
+                }
+            }
         }
     }
     
     // MARK: - Helpers
     
     func sendMessage() async {
+        let question = message
         guard !message.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         let chat = Chat(id: UUID().uuidString, content: message, createAt: Date(), sender: .me)
         chatViewModel.chats.append(chat)
         message = ""
-        guard  let chatGPT = await chatViewModel.sendMessage(message: chat.content) else { return }
-        if (chatGPT.content ).isEmpty {
+        guard let chatGPT = await chatViewModel.sendMessage(message: chat.content) else { return }
+        
+        if (chatGPT.content).isEmpty {
             chatViewModel.chats.removeAll(where: { $0.id == chat.id })
+            return
         }
+        
+        addItem(question: question, answer: chatGPT.content)
     }
     
-    var  progressView: some View {
+    var progressView: some View {
         ProgressView()
             .padding()
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
     }
+    
     // MARK: emptyView
     
     var emptyView: some View {
-        VStack{
+        VStack {
             Spacer()
             ZStack {
                 Color(.gray.opacity(0.1))
@@ -123,6 +147,17 @@ struct ChatGPTView: View {
             }
             .frame(height: 300)
             .padding(.bottom)
+        }
+    }
+    
+    private func addItem(question: String, answer: String) {
+        let newItem = SwiftDataModel(dateAdded: Date(), question: question, answer: answer)
+        print("question: \(question) answer: \(answer)")
+        modelContext.insert(newItem)
+        do {
+            try modelContext.save()
+        } catch {
+            print("Error saving item: \(error.localizedDescription)")
         }
     }
 }

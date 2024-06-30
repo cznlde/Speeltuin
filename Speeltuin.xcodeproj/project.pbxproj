@@ -33,6 +33,8 @@
 		4A6A7ADC2C1D783300B9288C /* TopicImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ADB2C1D783300B9288C /* TopicImageView.swift */; };
 		4A6A7ADE2C1D784900B9288C /* TopicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6A7ADD2C1D784900B9288C /* TopicListView.swift */; };
 		4A73057E2C2758F100B5CA44 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */; };
+		4A764FCC2C31B947007AD0A6 /* SwiftDataVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A764FCB2C31B947007AD0A6 /* SwiftDataVIew.swift */; };
+		4A764FCE2C31BBEF007AD0A6 /* SwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A764FCD2C31BBEF007AD0A6 /* SwiftDataModel.swift */; };
 		4A84FFC62C1DAFA500B15121 /* BaseTopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84FFC52C1DAFA500B15121 /* BaseTopicView.swift */; };
 		4A84FFC82C1DB0B700B15121 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A84FFC72C1DB0B700B15121 /* README.md */; };
 		4A84FFCB2C1DB3EA00B15121 /* TopicStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A84FFCA2C1DB3EA00B15121 /* TopicStateView.swift */; };
@@ -90,6 +92,8 @@
 		4A6A7ADB2C1D783300B9288C /* TopicImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicImageView.swift; sourceTree = "<group>"; };
 		4A6A7ADD2C1D784900B9288C /* TopicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListView.swift; sourceTree = "<group>"; };
 		4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
+		4A764FCB2C31B947007AD0A6 /* SwiftDataVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataVIew.swift; sourceTree = "<group>"; };
+		4A764FCD2C31BBEF007AD0A6 /* SwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModel.swift; sourceTree = "<group>"; };
 		4A84FFC52C1DAFA500B15121 /* BaseTopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTopicView.swift; sourceTree = "<group>"; };
 		4A84FFC72C1DB0B700B15121 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A84FFCA2C1DB3EA00B15121 /* TopicStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicStateView.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 				4A64332A2C27F26A008463AC /* Chat.swift */,
 				4A64332C2C2817E9008463AC /* OpenAI.swift */,
 				4A64332E2C281BC9008463AC /* OpenAIConstants.swift */,
+				4A764FCD2C31BBEF007AD0A6 /* SwiftDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,7 +213,9 @@
 		4A6433292C27F254008463AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */,
 				4A6433262C27F154008463AC /* MessageView.swift */,
+				4A764FCB2C31B947007AD0A6 /* SwiftDataVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,7 +302,6 @@
 				4A6433322C2849A5008463AC /* ViewModel */,
 				4A6433292C27F254008463AC /* View */,
 				4A6433282C27F24C008463AC /* Model */,
-				4A73057D2C2758F100B5CA44 /* ChatGPTView.swift */,
 			);
 			path = ChatGPT;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 				4A3285512C25F7B00015C165 /* ApiEndpoint.swift in Sources */,
 				4A84FFD72C1F268D00B15121 /* EnvironmentViewOld.swift in Sources */,
 				4A32854D2C25F2910015C165 /* Location.swift in Sources */,
+				4A764FCC2C31B947007AD0A6 /* SwiftDataVIew.swift in Sources */,
 				4A64332B2C27F26A008463AC /* Chat.swift in Sources */,
 				4A6433252C26E918008463AC /* MeasurementFormatter+Extensions.swift in Sources */,
 				4A64332D2C2817E9008463AC /* OpenAI.swift in Sources */,
@@ -461,6 +468,7 @@
 				4A84FFC62C1DAFA500B15121 /* BaseTopicView.swift in Sources */,
 				4A3285552C25FF590015C165 /* WeatherClient.swift in Sources */,
 				4A6433342C2849C1008463AC /* ChatViewModel.swift in Sources */,
+				4A764FCE2C31BBEF007AD0A6 /* SwiftDataModel.swift in Sources */,
 				4A3285412C1F32010015C165 /* Config.swift in Sources */,
 				4A84FFD02C1DD33700B15121 /* TopicStateViewListButton.swift in Sources */,
 				4A6A7ADA2C1D782400B9288C /* TopicTextView.swift in Sources */,
