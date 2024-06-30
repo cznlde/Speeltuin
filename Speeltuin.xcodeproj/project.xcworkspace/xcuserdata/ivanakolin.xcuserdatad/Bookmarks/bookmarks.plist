@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>118</string>
+					<string>172</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>117</string>
+					<string>172</string>
 					<key>Timestamp</key>
-					<string>741464803.199711</string>
+					<string>741467332.959071</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -34,17 +34,13 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>        addItem(question: question, answer: chatGPT.content)
-</string>
+				<string></string>
 				<key>leading</key>
-				<string>        }
-        
+				<string>    }
+}
 </string>
 				<key>trailing</key>
-				<string>    }
-    
-    var progressView: some View {
-</string>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>bookmark</string>

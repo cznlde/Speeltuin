@@ -50,6 +50,9 @@ struct ChatGPTView: View {
                         .padding()
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(25)
+                        .disableAutocorrection(true) // Disable autocorrection
+                        .autocapitalization(.none) // Disable auto-capitalization
+                        .keyboardType(.default) // Set the keyboard type if needed
                         .onSubmit {
                             Task {
                                 await sendMessage()
@@ -75,7 +78,7 @@ struct ChatGPTView: View {
                     Button {
                         showSwiftDataView = true
                     } label: {
-                     
+                        
                         Image(systemName: "clock")
                             .font(.caption)
                     }
