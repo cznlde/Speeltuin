@@ -4,7 +4,7 @@ import Foundation
 class ChatViewModel: ObservableObject {
     @Published var chats: [Chat] = []
     @Published var isLoading = false
-    func sendMessage(message: String) async {
+    func sendMessage(message: String) async -> Chat? {
         isLoading = true
         let openBody = OpenAIBody(model: "gpt-3.5-turbo", messages: [
             Message(role: "system", content: "You are talking to a dog."),
@@ -13,7 +13,7 @@ class ChatViewModel: ObservableObject {
         guard let url = URL(string: OpenAIConstants.baseUrl) else {
             print("Invalid URL")
             isLoading = false
-            return
+            return nil
         }
         
         var request = URLRequest(url: url)
@@ -30,7 +30,7 @@ class ChatViewModel: ObservableObject {
         } catch {
             print("Failed to encode body: \(error)")
             isLoading = false
-            return
+            return nil
         }
         
         // MARK: - method
@@ -65,6 +65,7 @@ class ChatViewModel: ObservableObject {
                 
                 chats.append(chat)
                 isLoading = false
+                return chat
             } catch {
                 print("Failed to decode response: \(error)")
                 throw error
@@ -74,5 +75,6 @@ class ChatViewModel: ObservableObject {
             isLoading = false
             print("Network error: \(error)")
         }
+        return nil
              }
 }
